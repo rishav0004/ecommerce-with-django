@@ -7,7 +7,9 @@
         {% for product in products %}
 
         <div class="col-lg-4">
-            <img class="thumbnail" src="{% static 'images/' %}" alt="" srcset="">
+            {% comment %} <img class="thumbnail" src="http://127.0.0.1:8000/images/download.jpg"/> {% endcomment %}
+            {% comment %} <img class="thumbnail" src="{% static 'images/download.jpg' %}" /> {% endcomment %}
+            <img class="thumbnail" src="{{product.imageURL}}" alt="">
             <div class="box-element product">
                 <h6><strong>{{product.name}}</strong></h6>
                 <hr>  
@@ -16,6 +18,7 @@
                 <h4 style="display:inline-block; float:right">Rs. {{product.price}}</h4>
 
             </div>
+            <br>
         </div>
 
         {% endfor %}
