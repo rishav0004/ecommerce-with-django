@@ -13,7 +13,7 @@
             <div class="box-element product">
                 <h6><strong>{{product.name}}</strong></h6>
                 <hr>  
-                <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                <button data-product={{product.id}} data-action="add" type="button" class="btn btn-outline-primary update-cart">Add to Cart</button>
                 <a class="btn btn-primary" href="#" role="button">View</a>
                 <h4 style="display:inline-block; float:right">Rs. {{product.price}}</h4>
 
